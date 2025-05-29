@@ -1,58 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle Financeiro</title>
-</head>
-<body>
-    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="iwillsurvive.css">
 </head>
-<body>
+    <body>
+        <div class="container"></div>
+        <div class="ciricuticu">
+    
 
-  <h1>Meu Controle Financeiro</h1>
+    </div>
+    <div class="cirugames"></div>
+    <div class="fundo">
 
-    <nav>
-        <button>Adicionar</button>
-        <button>Consultar</button>
-    </nav>
+        <h1>Meu Controle Financeiro</h1>
+        
+            <nav>
+                <button>Adicionar</button>
+                <button>Consultar</button>
+            </nav>
 
-    <section class="adicionar">
-    <form>
-      <input type="text" id="descricao" placeholder="Descrição" required />
-      <input type="number" id="valor" placeholder="Valor" required />
-      <select id="tipo">
-        <option value="entrada">Entrada</option>
-        <option value="saida">Saída</option>
-      </select>
-      <button type="submit">Adicionar</button>
-    </form>
-  </section>
+            
 
-  <section id="consultar">
-    <h2>Resumo do seu Extrato</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Tipo</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    <div class="saldo">Saldo: </div>
-  </section>
+            <section class="adicionar">
+            <form>
+            <input type="text" id="descricao" placeholder="Descrição" required />
+            <input type="number" id="valor" placeholder="Valor" required />
+            <select id="tipo">
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button type="submit">Adicionar</button>
+            </form>
+        </section>
 
-</body>
-</html>
+        <section id="consultar">
+            <h2>Resumo do seu Extrato</h2>
+            <table>
+            <thead>
+                <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            <div class="saldo">Saldo: </div>
+            </div>
+    </div>      
+    </section>
 
-</body>
+    </body>
 </html>

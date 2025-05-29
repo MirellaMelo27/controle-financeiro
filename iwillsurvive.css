@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  margin-top: 5vw;
+  margin-left: 30% ;
+  padding: 20px;
+  background-image: url('fundo.gif');
+   background-size: 2.5% 2.5%;
+}
+
+.terminal {
+  max-width: 800px;
+  margin: 50px auto;    
+  padding: 20px;
+  border: 2px solid #00FF00;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+p {
+  margin: 5px 0;
+}
+
+.ciricuticu{
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+     background-color: 00FF00 ;
+      position: fixed;
+    top: 0;
+    left: 0;
+      
+  
+}
+
+.cirugames{
+  
+    z-index: 2;
+    position: relative; 
+     /* cobre toda a tela */
+}
+
+body {
+  background-image: url(fundo.gif);
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: monospace;
+  color: #00ff00;
+}
+.fundo {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  margin: 20px auto;
+  width: 90%;        
+  max-width: 1200px;
+  min-height: 100vh; 
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00ff00;
+}
