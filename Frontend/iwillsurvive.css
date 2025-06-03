@@ -1,0 +1,378 @@
+body {
+  background-color: #000000;
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  background-image: url('fundo.gif');
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.fundo {
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 25px 40px;
+  margin: 3vh auto;
+  width: 90%;
+  max-width: 1000px;
+  min-height: 90vh;
+  box-sizing: border-box;
+  border: 1px solid #00FF00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 15px rgba(0, 255, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2em;
+  text-shadow: 0 0 7px #00FF00, 0 0 10px rgba(0,255,0,0.7);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.adicionar {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: rgba(0, 40, 0, 0.4);
+  border: 1px dashed #008F00;
+  border-radius: 6px;
+}
+
+.adicionar form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.adicionar input[type="text"],
+.adicionar input[type="number"],
+.adicionar select {
+  background-color: rgba(0,0,0,0.7);
+  color: #00FF00;
+  border: 1px solid #008F00;
+  padding: 12px 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  border-radius: 4px;
+  flex-grow: 1;
+  min-width: 150px;
+}
+
+.adicionar input::placeholder {
+  color: rgba(0, 255, 0, 0.4);
+}
+
+.adicionar select {
+  flex-grow: 0.5;
+}
+
+.adicionar button[type="submit"] {
+  background-color: #00FF00;
+  color: #000000;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  flex-grow: 0;
+}
+
+.adicionar button[type="submit"]:hover,
+.adicionar button[type="submit"]:focus {
+  background-color: #008000;
+  color: #00FF00;
+  box-shadow: 0 0 12px #00FF00;
+  outline: none;
+}
+
+.cabecalho-extrato {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #00FF00;
+}
+
+.tabela-container {
+  overflow-x: auto;
+  border: 1px solid #005000;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.tabela-extrato {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-extrato th,
+.tabela-extrato td {
+  border: 1px solid #005000;
+  padding: 12px 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tabela-extrato th {
+  background-color: rgba(0, 80, 0, 0.6);
+  color: #00FF00;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabela-extrato tbody tr {
+  background-color: rgba(0, 15, 0, 0.3);
+  transition: background-color 0.2s;
+}
+
+.tabela-extrato tbody tr:nth-child(even) {
+  background-color: rgba(0, 30, 0, 0.4);
+}
+
+.tabela-extrato tbody tr:hover {
+  background-color: rgba(0, 80, 0, 0.7);
+}
+
+.tabela-extrato td:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+}
+
+.tabela-extrato .tipo-entrada {
+  color: #33FF33;
+  font-weight: bold;
+}
+
+.tabela-extrato .tipo-saida {
+  color: #FF4444;
+  font-weight: bold;
+}
+
+.resumo-financeiro {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(0, 20, 0, 0.6);
+  border: 1px solid #008F00;
+  border-radius: 6px;
+}
+
+.resumo-financeiro h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  color: #00FF00;
+  text-shadow: 0 0 3px #00FF00;
+}
+
+.resumo-financeiro p {
+  margin: 10px 0;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resumo-financeiro p strong {
+  color: #00FF00;
+}
+
+.resumo-financeiro span {
+  font-weight: bold;
+}
+
+.saldo-valor.positivo {
+  color: #33FF33;
+}
+
+.saldo-valor.negativo {
+  color: #FF4444;
+}
+
+.saldo-valor.zero {
+  color: #00FF00; /* Ou a cor padrão do texto */
+}
+
+.grafico-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(0, 20, 0, 0.6); /* Similar ao resumo */
+  border: 1px solid #008F00;
+  border-radius: 6px;
+}
+
+.grafico-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  color: #00FF00;
+  text-shadow: 0 0 3px #00FF00;
+}
+
+#graficoEntradasSaidas {
+  max-height: 350px; /* Define uma altura máxima para o gráfico */
+  width: 100% !important; /* Força a largura total do container */
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.ciricuticu {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00FF00;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  color: #00FF00; /* Cor do texto padrão do modal */
+}
+
+.modal-conteudo {
+  background-color: #000000;
+  margin: 10% auto;
+  padding: 25px 35px;
+  border: 1px solid #00FF00;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 550px;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+  position: relative;
+}
+
+.modal-fechar {
+  color: #00FF00;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.modal-fechar:hover,
+.modal-fechar:focus {
+  color: #80FF80;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-conteudo h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px #00FF00;
+}
+
+#formModalEditar div {
+  margin-bottom: 18px;
+}
+
+#formModalEditar label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#formModalEditar input[type="text"],
+#formModalEditar input[type="number"],
+#formModalEditar select {
+  width: calc(100% - 22px); /* Considera padding e borda */
+  padding: 10px;
+  background-color: rgba(0, 20, 0, 0.5);
+  color: #00FF00;
+  border: 1px solid #008F00;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+}
+
+#formModalEditar input::placeholder {
+  color: rgba(0, 255, 0, 0.4);
+}
+
+.modal-botoes {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espaço entre os botões */
+  flex-wrap: wrap; /* Para telas menores */
+}
+
+.modal-botoes button {
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  flex-grow: 1; /* Faz os botões ocuparem espaço disponível */
+  min-width: 120px; /* Largura mínima para botões */
+}
+
+#btnSalvarModal {
+  background-color: #00FF00;
+  color: #000000;
+}
+#btnSalvarModal:hover {
+  background-color: #008000;
+  color: #00FF00;
+  box-shadow: 0 0 10px #00FF00;
+}
+
+#btnExcluirModal {
+  background-color: #FF4444;
+  color: #000000;
+}
+#btnExcluirModal:hover {
+  background-color: #AA0000;
+  color: #FFCCCC;
+  box-shadow: 0 0 10px #FF4444;
+}
+
+#btnCancelarModal {
+  background-color: #555555;
+  color: #CCCCCC;
+}
+#btnCancelarModal:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}

@@ -1,0 +1,14 @@
+Controle de Financeiro
+
+Entrada +
+Saida -
+
+Schema:
+Valor
+Descrição
+Tipo
+
+Total Entrada
+Total Saida
+Total
+
